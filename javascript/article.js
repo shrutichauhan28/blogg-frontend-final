@@ -83,7 +83,7 @@ async function deleteArticle(id) {
             throw new Error('Failed to delete the article');
         }
         alert('Article deleted successfully');
-        window.location.href = '/CreatePost.html'; // Redirect to the homepage after deletion
+        window.location.href = '/CreatePost'; // Redirect to the homepage after deletion
     } catch (error) {
         console.error('Error:', error);
     }
