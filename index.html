@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookBook - Landing Page</title>
+    <link rel="stylesheet" href="css/landing.css">
+    <style>
+        /* Add some basic styles for the recipe cards */
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .recipe-card-content {
+            padding: 15px;
+        }
+
+        .recipe-card-content h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .recipe-card-content p {
+            color: #555;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">CookBook</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="register.html" class="nav-button">Register</a></li>
+            <li><a href="login.html" class="nav-button">Sign in</a></li>
+            <!-- <li><a href="register.html" class="nav-button">Get started</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CookBook</h1>
+            <p>A Place to Explore, Cook, and Share Delicious Recipes.</p>
+            <a href="register.html" class="start-reading-btn">Start Cooking</a>
+        </div>
+        <!-- <div class="hero-image">
+            <img src="images/hero_img.png" alt="Hero Image">
+        </div> -->
+    </section>
+
+    <!-- Recipe Cards Section -->
+    <section class="recipe-cards">
+        <div class="recipe-card">
+            <img src="images/recipes/3.jpg" alt="Recipe 1">
+            <div class="recipe-card-content">
+                <h3>Classic Spaghetti</h3>
+                <p>A timeless Italian dish with a rich tomato sauce and hearty meatballs.</p>
+                <a href="login.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="images/recipes/4.jpg" alt="Recipe 2">
+            <div class="recipe-card-content">
+                <h3>Chicken Curry</h3>
+                <p>A flavorful and spicy curry with tender chicken and aromatic spices.</p>
+                <a href="login.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="images/recipes/5.jpg" alt="Recipe 3">
+            <div class="recipe-card-content">
+                <h3>Vegetable Stir-Fry</h3>
+                <p>A quick and healthy stir-fry with a colorful mix of fresh vegetables.</p>
+                <a href="login.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript/landing.js"></script>
+</body>
+</html>

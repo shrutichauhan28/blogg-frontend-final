@@ -1,0 +1,111 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-image: url('../images/flat-lay-2583213_640.jpg'); /* Background image path */
+    background-size: cover; /* Makes the background image cover the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+    background-position: center; /* Centers the image */
+    color: #394a51;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Adjusted padding for smaller screens */
+}
+
+/* Form container styles */
+.form-container {
+    width: 90%; /* Default width, adjusts based on screen size */
+    max-width: 800px; /* Maximum width to prevent stretching on large screens */
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    margin: 20px auto; /* Centers form with margin auto */
+}
+
+/* Input group styles */
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+}
+
+/* Button styles */
+.glow-button {
+    background-color: #394a51;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.glow-button:hover {
+    background-color: #2c3a40;
+}
+
+.login-link {
+    margin-top: 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+
+    .form-container {
+        width: 95%; /* Increases form width to occupy more space */
+        padding: 20px; /* Reduces padding for smaller screens */
+    }
+
+    input, textarea {
+        width: calc(100% - 10px); /* Reduces input width for smaller screens */
+        font-size: 13px; /* Smaller font size for better fit */
+    }
+
+    .glow-button {
+        font-size: 14px; /* Adjusts button font size */
+        padding: 8px 16px; /* Adjusts button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%; /* Form takes full width */
+        padding: 15px; /* Reduces padding for very small screens */
+    }
+
+    .glow-button {
+        font-size: 12px; /* Further reduces button font size */
+        padding: 6px 12px; /* Adjusts button padding */
+    }
+}

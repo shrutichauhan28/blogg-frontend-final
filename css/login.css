@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Georgia', serif;
+    background-image: url('../images/flat-lay-2583213_640.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #394a51;
+    display: flex;
+    justify-content: center; /* Centers the form container horizontally */
+    align-items: center; /* Centers the form container vertically */
+    height: 100vh; /* Makes the body full-height for vertical centering */
+    overflow: hidden; /* Prevents scroll if content overflows */
+}
+
+/* Container for the entire page */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+/* Form container styles */
+.form-container {
+    flex: 1; /* Takes full width available within flex */
+    max-width: 600px; /* Keeps a reasonable maximum width for the form */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Adds padding inside the form */
+    background-color: #ffffff;
+    border-radius: 12px; /* Slightly increases the rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds shadow for a more pronounced effect */
+    margin: 20px; /* Adds margin around the form */
+    width: 100%; /* Ensures full width responsiveness */
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input group styles */
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+/* Button styles */
+.glow-on-hover {
+    background-color: #394a51;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.glow-on-hover:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px; /* Reduces padding for smaller screens */
+        max-width: 90%; /* Makes the form width more flexible */
+    }
+
+    .glow-on-hover {
+        font-size: 14px; /* Smaller font size for buttons on smaller screens */
+        padding: 10px 16px; /* Adjusts padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 10px; /* Further reduces padding for very small screens */
+        width: 95%; /* Ensures the form takes up more width on smaller screens */
+    }
+
+    .glow-on-hover {
+        font-size: 12px; /* Further reduces button font size */
+        padding: 8px 14px; /* Adjusts button padding */
+    }
+}

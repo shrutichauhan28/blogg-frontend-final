@@ -1,0 +1,407 @@
+/* Color Palette */
+:root {
+    --primary-color: #2c3e50; /* Deep Blue-Grey */
+    --secondary-color: #e74c3c; /* Vivid Red */
+    --accent-color: #3498db; /* Bright Blue */
+    --background-color: #ecf0f1; /* Light Grey */
+    --text-color: #2c3e50; /* Deep Blue-Grey */
+    --light-text-color: #95a5a6; /* Muted Grey */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 143px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('images/icon/1.jpg');
+    background-size: cover;
+    color: var(--text-color);
+  
+}
+
+/* .divider {
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+} */
+
+/* Post Cards */
+.posts1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.post-card1 {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.post-image1 {
+    width: 200px; /* Adjust the width of the image as needed */
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.post-content1 {
+    padding: 20px;
+    width: 60%; /* Adjust the width of the content as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-content1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.post-content1 p {
+    font-size: 1rem;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Responsive Styles for Horizontal Post Cards */
+@media (max-width: 768px) {
+    .post-card1 {
+        flex-direction: column;
+    }
+
+    .post-image1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content1 {
+        width: 100%;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--background-color);
+}
+
+.hamburger i {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.navbar.responsive .hamburger i {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.navbar.responsive .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.responsive .nav-links.active {
+    display: flex;
+}
+
+.navbar.responsive .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Featured Post Section */
+.featured-post-container {
+    display: flex;
+    flex-direction: row; /* Ensure the image and content are side by side */
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-post-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.featured-post-image {
+    width: 200px; /* Adjust the width of the image as needed */
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.featured-content-wrapper {
+    flex: 1;
+    padding: 10px 20px; /* Adjusted padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.featured-content-wrapper h2 {
+    font-size: 24px; /* Font size for the title */
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.featured-content-wrapper p {
+    margin-bottom: 10px;
+    font-size: 14px; /* Font size for the content */
+    color: var(--light-text-color);
+}
+
+.featured-content-wrapper .read-more {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.author-name {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+/* Responsive Styles for Horizontal Featured Post */
+@media (max-width: 768px) {
+    .featured-post-card {
+        flex-direction: column; /* Stack the image and content vertically on smaller screens */
+    }
+
+    .featured-post-image {
+        width: 100%; /* Image takes full width in stacked layout */
+        height: auto;
+    }
+
+    .featured-content-wrapper {
+        width: 100%; /* Content takes full width in stacked layout */
+    }
+}
+
+/* Posts Section */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.post-card h3 {
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.post-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.post-subtitle, .post-body {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--light-text-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 100px;
+        align-self: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .featured-post-card {
+        flex-direction: column;
+    }
+
+    .featured-post-image {
+        width: 100%;
+    }
+
+    .featured-content-wrapper p {
+        font-size: 20px;
+    }
+
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .posts {
+        padding: 0;
+    }
+
+    .logo img {
+        height: 80px;
+        align-self: center;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    body {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .featured-content-wrapper h2 {
+        font-size: 20px;
+    }
+
+    .featured-content-wrapper p {
+        font-size: 14px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+}
